@@ -1,0 +1,181 @@
+<html>
+<link href="http://fonts.googleapis.com/css?family=Lato:300|Grand+Hotel" rel="stylesheet">
+
+<style>
+  body {
+    background-color: #fffff0;
+  }
+  
+  h1 {
+    font-family: lato;
+    margin: 20 auto;
+    font-size: 2em;
+    text-transform: lowercase;
+    position: absolute;
+    left: 50%;
+    top: 4%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    animation-name: textmove;
+    animation-duration: 100s;
+    animation-iteration-count: 1;
+  }
+  
+  h2 {
+    font-family: lato;
+    text-align: center;
+    font-size: 0.9em;
+    color: white;
+  }
+  
+  .circle {
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid orange;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    }
+    
+    
+  .diamond {
+    background-color: orange;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    z-index: -1;
+    transform-origin: center;
+    border-radius: 5%
+    }
+    
+  .square {
+    background-color: orange;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+    transform-origin: center;
+    border-radius: 5%
+    }
+    
+    
+    
+  .mainbox {
+    background: black;
+    height: 60px;
+    width: 150px;
+    border-radius: 5%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(200%);
+    box-shadow: 0px 6px 21px 0px rgba(0,0,0,0.75);
+    }
+    
+  .weetriangleboi {
+    background: linear-gradient(135deg, black 86%, white 14%);
+    height: 40px;
+    width: 40px;
+    border-radius: 6%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(300%) rotate(45deg);
+    z-index: -1;
+    }
+  
+  .descriptionofsun {
+    opacity: 0.0;
+    transition: all 500ms ease-in-out;
+    }
+  
+  .sun:hover + .descriptionofsun {
+    opacity: 1.0;
+    }
+    
+    
+  @keyframes textmove {
+    0% {color: #fffff0}
+    2% {color: #fffff0}
+    4% {color: black}
+    6% {color: black}
+    9% {color: #fffff0}
+    10% {color: #fffff0}
+    100% {color: #fffff0}
+  }
+  
+  img {
+    height: 35px; 
+  }
+ 
+ .earth {
+  background-color: #fffff0;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -50;
+  animation: myOrbit 4s linear infinite, appear 1s 10s ease-in-out forwards;
+  visibility: hidden;
+  animation: 
+  animation-fill-mode: forwards;
+ }
+ 
+ @keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+  
+  @keyframes appear {
+    99% { visibility: hidden;}
+    100% { visibility: visible}
+  }
+  
+</style>
+
+<body>
+  <h1> oh hi, i didn't see you there</h1>
+  <div class="sun">
+    <div class="circle"></div>
+    <div class="petals">
+      <div class="square"></div>
+      <div class="diamond"></div>
+    </div>
+  </div>
+  
+  <div class="descriptionofsun">
+    <div class="mainbox">
+      <h2>yeah, a css-produced sun. kinda cool i guess</h2>
+    </div>
+    <div class="weetriangleboi"></div>
+  </div>
+  
+  <div class="planets">
+    <div class="mercury"></div>
+    <div class="venus"></div>
+    <div class="earth">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk0ebWsf_kw2yYP0wMFugyQThY3S-_O2j884p69rXwnwGTegdb">
+    </div>
+    <div class="mars"></div>
+    <div class="jupiter"></div>
+    <div class="saturn"></div>
+    <div class="uranus"></div>
+    <div class="neptune"></div>
+  </div>
+
+</body>
+
+</html>
+
