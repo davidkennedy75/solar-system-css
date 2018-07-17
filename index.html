@@ -5,7 +5,7 @@
   body {
     background-color: #fffff0;
   }
-  
+  /*
   h1 {
     font-family: lato;
     margin: 20 auto;
@@ -20,7 +20,7 @@
     animation-duration: 100s;
     animation-iteration-count: 1;
   }
-  
+  */
   h2 {
     font-family: lato;
     text-align: center;
@@ -103,6 +103,15 @@
     }
     
     
+    
+  @keyframes sunspin {
+    0% {transform: rotate(0deg);} 
+    0% {transform: rotate(0deg);} 
+    0% {transform: rotate(0deg);} 
+    0% {transform: rotate(0deg);} 
+    0% {transform: rotate(0deg);} 
+  
+  }
   @keyframes textmove {
     0% {color: #fffff0}
     2% {color: #fffff0}
@@ -113,10 +122,14 @@
     100% {color: #fffff0}
   }
   
-  img {
+  .earthimg {
     height: 35px; 
   }
- 
+  
+  .mercuryimg {
+    height: 35px;
+  }
+  
  .earth {
   background-color: #fffff0;
   height: 35px;
@@ -127,17 +140,17 @@
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: -50;
-  animation: myOrbit 4s linear infinite, appear 1s 10s ease-in-out forwards;
+  animation: earthOrbit 4s linear infinite, appear 1s 10s ease-in-out forwards;
   visibility: hidden;
   animation: 
   animation-fill-mode: forwards;
  }
  
- @keyframes myOrbit {
-    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+ @keyframes earthOrbit {
+    from { transform: rotate(0deg) translateX(150px) /*rotate(0deg)*/; }
+    to   { transform: rotate(360deg) translateX(150px)/* rotate(-360deg)*/; }
 }
-  
+
   @keyframes appear {
     99% { visibility: hidden;}
     100% { visibility: visible}
@@ -146,7 +159,7 @@
 </style>
 
 <body>
-  <h1> oh hi, i didn't see you there</h1>
+ <!-- <h1> oh hi, i didn't see you there</h1> -->
   <div class="sun">
     <div class="circle"></div>
     <div class="petals">
@@ -163,10 +176,10 @@
   </div>
   
   <div class="planets">
-    <div class="mercury"></div>
+    <div class="mercury"> 
     <div class="venus"></div>
     <div class="earth">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk0ebWsf_kw2yYP0wMFugyQThY3S-_O2j884p69rXwnwGTegdb">
+      <img class="earthimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk0ebWsf_kw2yYP0wMFugyQThY3S-_O2j884p69rXwnwGTegdb">
     </div>
     <div class="mars"></div>
     <div class="jupiter"></div>
@@ -178,4 +191,3 @@
 </body>
 
 </html>
-
